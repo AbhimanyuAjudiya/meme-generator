@@ -12,16 +12,24 @@ export default function Meme(){
      * which you can then use to determine your new
      * value of state.
      */
+
     const [meme, setMeme] = React.useState({
         topText: "",
         bottomText: "",
         randomImage: "http://i.imgflip.com/1bij.jpg" 
     })
-    const [allMemeImages, setAllMemeImages] = React.useState(memesData)
+    const [allMeme, setAllMeme] = React.useState([])
+
+    React.useEffect(function() {
+        fetch("https://api.imgflip.com/get_memes")
+        .then(res => res.json())
+            .then(data => setAllMeme(data.data.memes))
+    }, [])
+    console.log(allMeme);
+
     function getMemeImage() {
-        const memesArray = allMemeImages.data.memes
-        const randomNumber = Math.floor(Math.random() * memesArray.length)
-        const url = memesArray[randomNumber].url
+        const randomNumber = Math.floor(Math.random() * allMeme.length)
+        const url = allMeme[randomNumber].url
         setMeme(prevMeme => ({
             ...prevMeme,
             randomImage: url
