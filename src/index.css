@@ -59,12 +59,20 @@ main {
   cursor: pointer;
 }
 
+.form--upload {
+  grid-column: 1 / -1;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
 .meme {
   position: absolute;
 }
 
 .meme--image {
-  max-width: 100%;
+  max-width: 512px;
+  max-height: 512px;
   border-radius: 3px;
 }
 
