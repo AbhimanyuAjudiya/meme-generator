@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 body {
@@ -20,6 +21,7 @@ main {
   background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
   color: white;
   padding: 20px;
+  overflow-y: hidden;
 }
 
 .header--image {
@@ -87,13 +89,14 @@ main {
 
 .meme {
   position: absolute;
+  overflow-y: hidden;
 }
 
 .meme--image {
   max-width: 100%;
-  max-height: 50vh;
+  max-height: 60vh;
   border-radius: 3px;
-  padding-right: 36px;
+  padding: 0;
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
@@ -101,12 +104,11 @@ main {
 
 .meme--text {
   position: absolute;
-  width: 80%;
   text-align: center;
   left: 50%;
   transform: translateX(-50%);
-  margin: 15px 0;
-  padding: 0 5px;
+  margin: 0;
+  padding: 0 3px;
   font-family: impact, sans-serif;
   font-size: 2em;
   text-transform: uppercase;
