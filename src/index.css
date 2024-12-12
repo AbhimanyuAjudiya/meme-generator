@@ -89,14 +89,16 @@ main {
 
 .meme {
   position: absolute;
-  overflow-y: hidden;
+  padding: 0;
+  margin: 0;
 }
 
 .meme--image {
   max-width: 100%;
-  max-height: 60vh;
+  max-height: 100%;
   border-radius: 3px;
   padding: 0;
+  margin: 0;
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
@@ -135,4 +137,56 @@ main {
 
 .top {
   top: 0;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 10px;
+  }
+  .header {
+    padding: 10px;
+  }
+
+  .header--title {
+    font-size: 1rem;
+  }
+
+  .header--project {
+    font-size: 0.5rem;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  .form {
+    gap: 5px;
+  }
+
+  .text--input {
+    padding: 5px;
+    font-size: 0.75rem;
+  }
+
+  .remove--button {
+    padding: 10px;
+    font-size: 0.75rem;
+  }
+
+  .form--button {
+    padding: 10px;
+    font-size: 0.75rem;
+  }
+
+  .form--upload {
+    padding: 10px;
+  }
+
+  .meme {
+    position: relative;
+  }
+
+  .meme--text {
+    font-size: 1.5em;
+  }
 }
